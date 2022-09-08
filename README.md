@@ -3,8 +3,6 @@
 ![OneSignal](./assets/onesignal-banner.png)
 
 <div align="center">
-  <h1>OneSignal</h1>
-
   <br />
   <a href="https://documentation.onesignal.com/docs/onboarding-with-onesignal" target="_blank">Quickstart</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
@@ -17,13 +15,13 @@
   <hr />
 </div>
 
-# 👋 Welcome
+## 👋 Welcome
 
 OneSignal makes messaging customers simple. OneSignal is the fastest and most reliable service to send push notifications, in-app messages, SMS, and emails.
 
-# 🚦 Getting started
+## 🚦 Getting started
 
-# ❤️ Developer Community
+## ❤️ Developer Community
 
 Please join the [OneSignal Developer Community](https://onesignal.com/onesignal-developers) for additional resources.
 
