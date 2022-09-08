@@ -3,7 +3,6 @@
 ![OneSignal](./assets/onesignal-banner.png)
 
 <div align="center">
-  <br />
   <a href="https://documentation.onesignal.com/docs/onboarding-with-onesignal" target="_blank">Quickstart</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
   <a href="https://onesignal.com/" target="_blank">Website</a>
