@@ -8,3 +8,4 @@ edition = "2021"
 [dependencies]
 tokio = { version = "1", features = ["full"] }
 onesignal = { path = "/Users/iamwill/code/@onesignal/onesignal-rust-api" }
+dotenv = "0.15.0"
