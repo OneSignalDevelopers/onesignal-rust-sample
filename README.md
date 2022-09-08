@@ -1,3 +1,5 @@
+# OneSignal Rust API Sample
+
 ![OneSignal](./assets/onesignal-banner.png)
 
 <div align="center">
@@ -19,7 +21,7 @@
 
 OneSignal makes messaging customers simple. OneSignal is the fastest and most reliable service to send push notifications, in-app messages, SMS, and emails.
 
-# Getting started with the OneSignal Rust API
+# 🚦 Getting started
 
 # ❤️ Developer Community
 
