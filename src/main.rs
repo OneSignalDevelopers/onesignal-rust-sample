@@ -1,34 +1,36 @@
+extern crate dotenv;
+
+use dotenv::dotenv;
 use onesignal::{
     apis::configuration::Configuration,
     models::{Notification, StringMap},
     *,
 };
+use std::env;
 
 #[tokio::main]
 async fn main() {
+    dotenv().ok();
     send_notification().await;
     send_email().await;
-
     println!("Done");
 }
 
 // API Client
 fn create_configuration() -> Box<Configuration> {
     let mut configuration = apis::configuration::Configuration::new();
-    configuration.app_key_token = Some(String::from(
-        "OGJlYzAxZDItYzA1Yy00ZDJlLWEzY2ItOTZmMTVjMmY1ZTM3",
-    ));
-    configuration.user_key_token = Some(String::from(
-        "NWE5NTJjMmMtMDcxMy00ZGJkLWFmY2MtZGM5N2E3OTEyNmY1
-    ",
-    ));
+    configuration.app_key_token =
+        Some(env::var("REST_API_KEY").expect("REST_API_KEY must be set!"));
+    configuration.user_key_token =
+        Some(env::var("USER_AUTH_KEY").expect("USER_AUTH_KEY must be set!"));
+
     Box::new(configuration)
 }
 
 fn create_notification() -> Box<Notification> {
-    let mut notification = Notification::new(String::from("b1ae09b2-5311-432e-b69c-65cb354f3472"));
-    let mut string_map = StringMap::new();
+    let mut notification = Notification::new(env::var("APP_ID").expect("APP_ID must be set!"));
 
+    let mut string_map = StringMap::new();
     string_map.en = Some(String::from("Rust test notification"));
     notification.contents = Some(Box::new(string_map));
     notification.is_chrome_web = Some(true);
