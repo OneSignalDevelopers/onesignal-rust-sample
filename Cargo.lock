@@ -427,7 +427,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "onesignal-with-rust"
+name = "onesignal-rust-api-sample"
 version = "0.1.0"
 dependencies = [
  "dotenv",
