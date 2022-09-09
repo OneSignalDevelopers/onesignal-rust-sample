@@ -1,5 +1,3 @@
-# OneSignal Rust API Sample
-
 ![OneSignal](./assets/onesignal-banner.png)
 
 <div align="center">
@@ -14,11 +12,22 @@
   <hr />
 </div>
 
-## 👋 Welcome
+# OneSignal Rust API Sample
 
-OneSignal makes messaging customers simple. OneSignal is the fastest and most reliable service to send push notifications, in-app messages, SMS, and emails.
+OneSignal makes engaging customers simple and is the fastest, most reliable service to send push notifications, in-app messages, SMS, and emails.
+
+This project demonstrates sending push notifications using the OneSignal Rust API client. You can use this project as a boilerplate or reference to start your project.
+
 
 ## 🚦 Getting started
+
+This project assumes that you already have a OneSignal app created with push notifications setup. If you don't yet have a OneSignal app, [create one](#) first, then follow the steps to [integrate the OneSignal SDK](#) into your Android or iOS app.
+
+### Steps
+
+1. Make a copy of `.env.example` and rename it to `.env`
+2. Replace the variable descriptions with its respective value from your OneSignal app on the dashboard.
+3. Run the command `cargo run`
 
 ## ❤️ Developer Community
 
