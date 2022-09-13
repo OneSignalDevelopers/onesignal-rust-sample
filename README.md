@@ -28,15 +28,15 @@ This project assumes that you already have a OneSignal app created with push not
 2. Replace the variable descriptions with its respective value from your OneSignal app on the dashboard.
 3. Run the command `cargo run`
 
-# Support
+## 🤝 Support
 
-## Ask a question about OneSignal
+### Ask a question about OneSignal
 
 You can ask questions about the OneSignal xxx SDK and related topics in the onesignal-xxx-sdk repository.
 
 🙋‍♂️ [Ask a question](https://github.com/OneSignal/onesignal-rust-api/issues/new?assignees=&labels=triage&template=ask-question.yml&title=%5Bquestion%5D%3A+)
 
-## Create a bug report
+### Create a bug report
 
 If you receive an error message or get blocked by an issue, please create a bug report!
 
