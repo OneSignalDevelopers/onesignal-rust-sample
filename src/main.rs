@@ -12,6 +12,7 @@ use std::env;
 async fn main() {
     dotenv().ok();
     send_notification().await;
+    send_email().await;
     println!("Done");
 }
 
@@ -50,12 +51,42 @@ async fn send_notification() {
 
     // Check the result
     if let Ok(ref created_notification) = create_notification_response {
-        println!("Created notification id: {}", created_notification.id);
+        println!("Sent push notification: {}", created_notification.id);
     }
 
     if let Err(ref created_notification_error) = create_notification_response {
         println!(
-            "Created notification error: {}",
+            "Send push notification error: {}",
+            created_notification_error.to_string()
+        );
+    }
+}
+
+fn create_email() -> Box<Notification> {
+    let mut email_notification =
+        Notification::new(String::from("b1ae09b2-5311-432e-b69c-65cb354f3472"));
+
+    email_notification.email_subject = Some(String::from("Test from Rust"));
+    email_notification.email_body = Some(String::from("Sent from Rust!"));
+    email_notification.email_from_address = Some(String::from("william@onesignal.com"));
+    email_notification.included_segments = Some(vec![String::from("Email Users")]);
+
+    Box::new(email_notification)
+}
+
+async fn send_email() {
+    let config = create_configuration();
+    let email = create_email();
+    let create_notification_response =
+        apis::default_api::create_notification(&config, *email).await;
+
+    if let Ok(ref created_notification) = create_notification_response {
+        println!("Sent email: {}", created_notification.id);
+    }
+
+    if let Err(ref created_notification_error) = create_notification_response {
+        println!(
+            "Send email error: {}",
             created_notification_error.to_string()
         );
     }
