@@ -1,4 +1,4 @@
-![OneSignal](./assets/onesignal-banner.png)
+![OneSignal](https://raw.githubusercontent.com/OneSignalDevelopers/.github/main/assets/onesignal-banner.png)
 
 <div align="center">
   <a href="https://documentation.onesignal.com/docs/onboarding-with-onesignal" target="_blank">Quickstart</a>
